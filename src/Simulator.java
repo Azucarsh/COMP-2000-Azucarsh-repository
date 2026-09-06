@@ -15,13 +15,13 @@ public class Simulator extends JPanel {
         setBackground(Color.WHITE);
 
         //add some initial dinosaurs and cavemen
-        createDinosaur(getWidth()/2, getHeight() /2);
-        createCaveman(10, 100);
+        createDinosaur(300, 200);
+        createCaveman(200, 200);
 
         
         timer = new Timer(16, e -> {
                 for(int i = 0; i < animals.size(); i++) {
-                    animals.get(i).update(getWidth(), getHeight()); //getWidth and getHeight are the size of window
+                    //animals.get(i).update(getWidth(), getHeight()); //getWidth and getHeight are the size of window
                 }
                 repaint();
         });

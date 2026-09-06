@@ -43,33 +43,24 @@ public class Dinosaur extends Animal implements AnimalBehaviours {
         g2.setColor(new Color(60, 150, 60));
  
         // Body (oval)
-        g2.fillOval(x, y - 40, 100, 60);
+        g2.fillOval(x, y, 10, 20);
  
         // Tail (triangle-ish using polygon)
-        int[] tailX = {x, x - 40, x};
-        int[] tailY = {y - 30, y - 10, y};
+        int[] tailX = {x, x - 10, x + 5};
+        int[] tailY = {y + 10, y + 17, y + 15};
         g2.fillPolygon(tailX, tailY, 3);
  
-        // Neck + head
-        g2.fillOval(x + 80, y - 80, 30, 50);   // neck
-        g2.fillOval(x + 95, y - 100, 35, 30);  // head
+        // head
+        g2.fillOval(x + 3, y - 4, 10, 7);  // head
  
         // Legs
-        g2.fillRect(x + 15, y + 10, 12, 30);
-        g2.fillRect(x + 65, y + 10, 12, 30);
- 
-        // Spikes on back
-        g2.setColor(new Color(30, 100, 30));
-        for (int i = 0; i < 4; i++) {
-            int sx = x + 20 + i * 18;
-            int[] spikeX = {sx, sx + 8, sx + 16};
-            int[] spikeY = {y - 40, y - 55, y - 40};
-            g2.fillPolygon(spikeX, spikeY, 3);
-        }
+        g2.fillRect(x + 2 , y + 17, 2, 7); //left
+        g2.fillRect(x + 5, y + 17, 2, 7); //right
+
  
         // Eye
         g2.setColor(Color.BLACK);
-        g2.fillOval(x + 112, y - 95, 4, 4);
+        g2.fillOval(x + 5, y - 2, 2, 1);
 
     }
 }

@@ -40,18 +40,18 @@ public class Caveman extends Animal implements AnimalBehaviours{
         g2.setColor(Color.BLACK);
  
         // Head
-        g2.drawOval(x, y - 110, 30, 30);
+        g2.drawOval(x - 3, y - 18, 6, 6);
  
         // Body
-        g2.drawLine(x + 15, y - 80, x + 15, y - 20);
+        g2.drawLine(x, y, x, y - 12);
  
         // Arms
-        g2.drawLine(x + 15, y - 65, x - 10, y - 40);
-        g2.drawLine(x + 15, y - 65, x + 40, y - 40);
+        g2.drawLine(x, y - 8, x - 5, y - 4); //left
+        g2.drawLine(x, y - 8, x + 5, y - 4); //right
  
         // Legs
-        g2.drawLine(x + 15, y - 20, x - 5, y + 20);
-        g2.drawLine(x + 15, y - 20, x + 35, y + 20);
+        g2.drawLine(x, y, x - 5, y + 5); //left
+        g2.drawLine(x, y, x + 5, y + 5); //right
     }
 
 }
